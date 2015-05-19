@@ -1,0 +1,37 @@
+import java.util.Scanner;
+import java.util.Stack;
+public class Tareapila {
+	public static void main(String[] args) {
+		Stack pila = new Stack ();
+		Stack pila2 = new Stack();
+		int n=0 ;
+		System.out.println("Ingrese numeros para la pila");
+		System.out.println("Ingrese 0 (cero) para terminar de ingresar datos");
+		Scanner s = new Scanner(System.in);
+		do{
+			n = s.nextInt();
+			if(n!=0)
+				pila.push(n);
+			else{}
+			}while(n!=0);
+		System.out.println("Pila Normal");
+		System.out.print("Ultimo en salir-> ");
+		System.out.print(pila);
+		System.out.println(" <-Primero en salir");
+		System.out.println();
+		System.out.println();
+		
+		System.out.println("(El primero que entra es el primero que sale)");
+		System.out.println();
+		do{
+		pila2.push(pila.pop());
+		}while((pila.isEmpty()==false));
+		System.out.println("Pila Convertida en Cola");
+		System.out.print("Ultimo en salir-> ");
+		System.out.print(pila2);
+		System.out.println(" <-Primero en salir");
+		}
+	private static void While(boolean b) {
+		// TODO Auto-generated method stub	
+	}
+	}//Pila a cola

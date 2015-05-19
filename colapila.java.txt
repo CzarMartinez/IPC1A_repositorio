@@ -1,0 +1,36 @@
+import java.util.LinkedList;
+import java.util.Scanner;
+public class colapila {
+	public static void main(String[] args){
+		int n=0;
+		int m=0;
+		LinkedList cola = new LinkedList();
+		LinkedList cola1 = new LinkedList();
+		LinkedList cola2 = new LinkedList();
+		LinkedList cola3 = new LinkedList();
+		LinkedList cola4 = new LinkedList();
+		Scanner s = new Scanner(System.in);
+		System.out.println("Ingrese 5 numeros para la cola");
+		n = s.nextInt();
+		cola.offer(n);
+		n = s.nextInt();
+		cola1.offer(n);
+		n = s.nextInt();
+		cola2.offer(n);
+		n = s.nextInt();
+		cola3.offer(n);
+		n = s.nextInt();
+		cola4.offer(n);
+		
+		cola4.offer(cola3.poll());
+		cola4.offer(cola2.poll());
+		cola4.offer(cola1.poll());
+		cola4.offer(cola.poll());
+		System.out.println("Pila hecha con colas");
+		System.out.println("(El primero que entra es el ultimo que sale)");		
+		while(cola4.peek()!=null){
+			System.out.println(cola4.poll());
+		}
+		
+	}
+}
